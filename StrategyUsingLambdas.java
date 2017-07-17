@@ -4,7 +4,7 @@ import java.util.function.Predicate; // functional interface takes object return
 
 class Util {
 
-	// normal function -> can take objects and return function
+	// normal function -> can take objects and return objects
 	public static boolean isEven(int num) {
 		return num % 2 == 0;
 	}
@@ -18,8 +18,8 @@ public class StrategyUsingLambdas {
 
 		// total all values
 
-		System.out.println(totalValues(numbers, e -> true));
-		System.out.println(totalValues(numbers, Util::isEven));
+		System.out.println(totalValues(numbers, e -> true)); // using lambdas
+		System.out.println(totalValues(numbers, Util::isEven)); // using function reference
 		System.out.println(totalValues(numbers, e -> e % 2 != 0));
 	}
 
